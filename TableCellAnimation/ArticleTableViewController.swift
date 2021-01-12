@@ -22,6 +22,7 @@ class ArticleTableViewController: UITableViewController {
                       "vapor-web-framework",
                       "cagradientlayer-demo",
                       "calayer-featured"];
+    var animatedCells = [IndexPath]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +45,13 @@ class ArticleTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
-        cell.layer.transform = rotationTransform
-        UIView.animate(withDuration: 1.0, animations: { cell.layer.transform = CATransform3DIdentity })
+        
+        if !animatedCells.contains(indexPath) {
+            let rotationTransform = CATransform3DTranslate(CATransform3DIdentity, -500, 100, 0)
+            cell.layer.transform = rotationTransform
+            UIView.animate(withDuration: 1.0, animations: { cell.layer.transform = CATransform3DIdentity })
+            animatedCells.append(indexPath)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,6 +62,4 @@ class ArticleTableViewController: UITableViewController {
 
         return cell
     }
-    
-
 }
