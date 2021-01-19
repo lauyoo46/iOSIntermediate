@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wEm-TY-kZi">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Doodle Fun-->
+        <scene sceneID="5ke-GB-ATX">
+            <objects>
+                <viewController id="iAp-OU-fQ7" customClass="DoodleViewController" customModule="DoodleFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="19q-aQ-8UU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="re2-Z6-Z82">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xco-Ho-0vR">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="SQb-w2-grC" customClass="DoodleCollectionViewCell" customModule="DoodleFun" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CHO-OM-UtL">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ykw-nt-Rad">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Ykw-nt-Rad" secondAttribute="bottom" id="2S2-b3-uKM"/>
+                                                <constraint firstItem="Ykw-nt-Rad" firstAttribute="leading" secondItem="CHO-OM-UtL" secondAttribute="leading" id="J4u-Qh-xcd"/>
+                                                <constraint firstItem="Ykw-nt-Rad" firstAttribute="top" secondItem="CHO-OM-UtL" secondAttribute="top" id="p6r-lV-c19"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ykw-nt-Rad" secondAttribute="trailing" id="t93-5G-2zb"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="Ykw-nt-Rad" id="78A-UM-sMg"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="iAp-OU-fQ7" id="v15-Tr-DIW"/>
+                                    <outlet property="delegate" destination="iAp-OU-fQ7" id="sm2-lP-DN5"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4W9-HC-XKF"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="re2-Z6-Z82" firstAttribute="leading" secondItem="4W9-HC-XKF" secondAttribute="leading" id="5jG-39-spR"/>
+                            <constraint firstItem="re2-Z6-Z82" firstAttribute="top" secondItem="19q-aQ-8UU" secondAttribute="top" id="619-LI-Ebh"/>
+                            <constraint firstItem="re2-Z6-Z82" firstAttribute="bottom" secondItem="19q-aQ-8UU" secondAttribute="bottom" id="b1z-Hj-8XP"/>
+                            <constraint firstItem="re2-Z6-Z82" firstAttribute="trailing" secondItem="4W9-HC-XKF" secondAttribute="trailing" id="gfs-Ih-WTS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Doodle Fun" id="pKP-0s-hCH"/>
+                    <connections>
+                        <outlet property="collectionView" destination="re2-Z6-Z82" id="th4-vh-M6D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZiQ-8K-hmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984.79999999999995" y="84.107946026986511"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o0Y-R9-rxQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wEm-TY-kZi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DcC-E6-IZQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iAp-OU-fQ7" kind="relationship" relationship="rootViewController" id="Gak-j6-qce"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgY-c0-csi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.600000000000001" y="84.107946026986511"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
