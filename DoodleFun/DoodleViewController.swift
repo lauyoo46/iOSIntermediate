@@ -47,8 +47,12 @@ extension DoodleViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let sideSize = (traitCollection.horizontalSizeClass == .compact &&
-                        traitCollection.verticalSizeClass == .regular) ? 80.0 : 128.0
+        
+        let collectionViewSize = collectionView.frame.size
+        let collectionViewArea = Double(collectionViewSize.width * collectionViewSize.height)
+        
+        let sideSize: Double = sqrt(collectionViewArea / (Double(doodleImages.count))) - 30.0
+        
         return CGSize(width: sideSize, height: sideSize)
     }
 }

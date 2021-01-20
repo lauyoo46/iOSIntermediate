@@ -60,10 +60,10 @@
                         <viewLayoutGuide key="safeArea" id="4W9-HC-XKF"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="re2-Z6-Z82" firstAttribute="leading" secondItem="4W9-HC-XKF" secondAttribute="leading" id="5jG-39-spR"/>
+                            <constraint firstItem="re2-Z6-Z82" firstAttribute="leading" secondItem="19q-aQ-8UU" secondAttribute="leading" id="5jG-39-spR"/>
                             <constraint firstItem="re2-Z6-Z82" firstAttribute="top" secondItem="19q-aQ-8UU" secondAttribute="top" id="619-LI-Ebh"/>
                             <constraint firstItem="re2-Z6-Z82" firstAttribute="bottom" secondItem="19q-aQ-8UU" secondAttribute="bottom" id="b1z-Hj-8XP"/>
-                            <constraint firstItem="re2-Z6-Z82" firstAttribute="trailing" secondItem="4W9-HC-XKF" secondAttribute="trailing" id="gfs-Ih-WTS"/>
+                            <constraint firstItem="re2-Z6-Z82" firstAttribute="trailing" secondItem="19q-aQ-8UU" secondAttribute="trailing" id="gfs-Ih-WTS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Doodle Fun" id="pKP-0s-hCH"/>
