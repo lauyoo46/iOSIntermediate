@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7OU-uk-ANV">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Font View Controller-->
+        <scene sceneID="Y2Z-Qx-EuO">
+            <objects>
+                <viewController id="7OU-uk-ANV" customClass="FontViewController" customModule="CustomFont" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TIP-FH-dT3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't be discouraged. It's often the last key in the bunch that opens the lock." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODp-9f-XhM">
+                                <rect key="frame" x="16" y="100" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't tell people your dream. Show them." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Kr-Uu-pi8">
+                                <rect key="frame" x="16" y="10" width="343" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you add values to the world, the world will give more values than you can imagine." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwm-EU-0NX">
+                                <rect key="frame" x="16" y="164" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="86a-gx-Z3D"/>
+                        <color key="backgroundColor" red="0.031372549019607843" green="0.035294117647058823" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Kr-Uu-pi8" firstAttribute="leading" secondItem="86a-gx-Z3D" secondAttribute="leading" constant="16" id="6YY-xQ-AFa"/>
+                            <constraint firstItem="Wwm-EU-0NX" firstAttribute="leading" secondItem="86a-gx-Z3D" secondAttribute="leading" constant="16" id="G0g-8W-Hgp"/>
+                            <constraint firstItem="Wwm-EU-0NX" firstAttribute="top" secondItem="ODp-9f-XhM" secondAttribute="bottom" constant="23" id="GJ3-0g-5P2"/>
+                            <constraint firstItem="3Kr-Uu-pi8" firstAttribute="top" secondItem="86a-gx-Z3D" secondAttribute="top" constant="10" id="LzY-Sk-oJR"/>
+                            <constraint firstItem="86a-gx-Z3D" firstAttribute="trailing" secondItem="Wwm-EU-0NX" secondAttribute="trailing" constant="16" id="PWN-v7-RQt"/>
+                            <constraint firstItem="86a-gx-Z3D" firstAttribute="trailing" secondItem="ODp-9f-XhM" secondAttribute="trailing" constant="16" id="aYG-mj-pty"/>
+                            <constraint firstItem="86a-gx-Z3D" firstAttribute="trailing" secondItem="3Kr-Uu-pi8" secondAttribute="trailing" constant="16" id="bG0-sy-lL2"/>
+                            <constraint firstItem="ODp-9f-XhM" firstAttribute="leading" secondItem="86a-gx-Z3D" secondAttribute="leading" constant="16" id="io0-Eh-1s6"/>
+                            <constraint firstItem="ODp-9f-XhM" firstAttribute="top" secondItem="3Kr-Uu-pi8" secondAttribute="bottom" constant="23" id="wzI-pP-nH5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="3Kr-Uu-pi8" id="i0u-wD-iHy"/>
+                        <outlet property="label2" destination="ODp-9f-XhM" id="FTa-tu-1gg"/>
+                        <outlet property="label3" destination="Wwm-EU-0NX" id="91a-Ra-oDn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8v-5k-eR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837.60000000000002" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
